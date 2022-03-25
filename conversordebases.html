@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <center>
+        <h1>Conversor de Bases</h1>
+
+        <br><br>
+
+        <h2>Decimal</h2>
+        <input id="demo1" type="text">
+
+        <br><br>
+
+        
+        <h3>Octal</h3>
+        <br>
+        <div style="display: block; background-color: transparent; border-radius: 5px; padding: 5px; color: rgb(255, 255, 255); width: 15%; height: 40px; font-weight: 500;" id="demo2"></div>
+
+        <br><br>
+        <h3>Hexadecimal</h3>
+        <br>
+        <div style="display: block; background-color: transparent; border-radius: 5px; padding: 5px; color: rgb(255, 255, 255); width: 15%; height: 40px; font-weight: 500;" id="demo3"></div>
+        <br><br>
+
+        <h3>Binário</h3>
+        <br>
+        <div style="display: block; background-color: transparent; border-radius: 5px; padding: 5px; color: rgb(255, 255, 255); width: 60%; height: 50px; font-weight: 500;" id="demo4"></div>
+
+        <br><br>
+
+        <button onclick="converter()">Converter</button>
+    </center>
+        
+      
+     </div>
+    
+</body>
+</html>
+<script>
+    function converter() {
+        var valor = Number(demo1.value)
+        demo2.innerHTML = ` ${valor.toString(8)}`
+        demo3.innerHTML = ` ${valor.toString(16)}`
+        demo4.innerHTML = ` ${valor.toString(2)}`
+    }
+
+</script>
